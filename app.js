@@ -64,4 +64,11 @@ document.addEventListener("DOMContentLoaded", function () {
         document.execCommand("copy");
         alert("Text copied to clipboard!");
     });
+
+    // Reset functionality
+    const resetButton = document.getElementById("reset");
+    resetButton.addEventListener("click", function () {
+        inputText.value = ""; // Clear input text
+        outputText.value = ""; // Clear output text
+    });
 });
