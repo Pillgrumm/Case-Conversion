@@ -1,4 +1,3 @@
-// app.js
 document.addEventListener("DOMContentLoaded", function () {
     const inputText = document.getElementById("input-text");
     const outputText = document.getElementById("output-text");
@@ -52,7 +51,17 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
             const converter = buttons[button.id];
             const input = inputText.value;
-            outputText.value = converter(input);
+            if (converter) {
+                outputText.value = converter(input);
+            }
         });
+    });
+
+    // Copy Text functionality
+    const copyButton = document.getElementById("copy-text");
+    copyButton.addEventListener("click", function () {
+        outputText.select();
+        document.execCommand("copy");
+        alert("Text copied to clipboard!");
     });
 });
