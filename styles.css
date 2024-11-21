@@ -71,3 +71,38 @@ button:hover {
     background-color: #f4f4f9;
     cursor: not-allowed;
 }
+
+/* Footer Styling */
+.footer {
+    position: fixed;
+    /* Makes it fixed at the bottom */
+    right: 0;
+    bottom: 0;
+    /* Sticks to the bottom */
+    background-color: black;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    /* Footer will take the full width of the screen */
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-icon {
+    color: aliceblue;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-icon:hover {
+    color: #81c784;
+}
+
+.footer-icon i {
+    font-size: 2rem;
+}
