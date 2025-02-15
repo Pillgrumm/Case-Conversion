@@ -57,12 +57,24 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Copy Text functionality
+    // Copy Text functionality with subtle notification
     const copyButton = document.getElementById("copy-text");
+    const container = document.querySelector(".container");
+
     copyButton.addEventListener("click", function () {
         outputText.select();
         document.execCommand("copy");
-        alert("Text copied to clipboard!");
+        
+        // Create notification
+        const notification = document.createElement("div");
+        notification.innerText = "Copied!";
+        notification.classList.add("notification");
+        container.appendChild(notification);
+        
+        // Remove notification after 2 seconds
+        setTimeout(() => {
+            notification.remove();
+        }, 2000);
     });
 
     // Reset functionality
